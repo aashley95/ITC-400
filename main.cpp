@@ -4,13 +4,14 @@
 
 #include <gtkmm.h>
 #include <iostream>
+#include "blocker.cpp"
 
 Gtk::Window* pWindow = nullptr;
 
 static
 void on_button_clicked()
 {
-    //function here to run script
+    block();
 }
 
 int main(int argc, char **argv)
@@ -41,7 +42,7 @@ int main(int argc, char **argv)
         refBuilder->get_widget("box1", pBox);
 
         Gtk::Label* pLabel = nullptr;
-        refBuilder->get_widget("label1", pLabel);
+        refBuilder->get_widget("title1", pLabel);
 
         Gtk::TextView* pTextView = nullptr;
         refBuilder->get_widget("textview1", pTextView);
