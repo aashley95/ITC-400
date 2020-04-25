@@ -10,6 +10,13 @@ Gtk::Window* pWindow = nullptr;
 Gtk::MessageDialog* pDialog = nullptr;
 
 static
+void on_button2_clicked()
+{
+    delete pDialog;
+    delete pWindow;
+}
+
+static
 void on_button_clicked()
 {
     block();
@@ -24,6 +31,11 @@ void on_button_clicked()
 
         Gtk::Button* pButton = nullptr;
         refBuilder->get_widget("button2", pButton);
+
+        if(pButton)
+        {
+            pButton->signal_clicked().connect( sigc::ptr_fun(on_button2_clicked) );
+        }
 
         app->run(*pDialog);
 
