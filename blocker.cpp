@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main()
+int block()
 {
 	// variable to store name of domain to block
 	string site;
