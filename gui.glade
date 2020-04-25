@@ -9,7 +9,8 @@
     <property name="text" translatable="yes">BlocU has been ran!</property>
     <property name="secondary_text" translatable="yes">Please restart for changes to take effect.</property>
     <child internal-child="vbox">
-      <object class="GtkBox">
+      <object class="GtkBox" id="box2">
+        <property name="name">box2</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
@@ -30,11 +31,12 @@
         </child>
         <child>
           <object class="GtkButton" id="button2">
-            <property name="label" translatable="yes">OK</property>
+            <property name="label" translatable="yes">Close and Restart Later</property>
             <property name="name">button2</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="halign">center</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -43,17 +45,34 @@
             <property name="position">2</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="button4">
+            <property name="label" translatable="yes">Restart Now</property>
+            <property name="name">button4</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack_type">end</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>
   <object class="GtkTextBuffer" id="textbuffer1">
     <property name="text" translatable="yes">Welcome to BlocU!
 
-To customize BlocU, manually edit the "adblock.txt" file to list
+To customize BlocU, click below to edit the "adblock.txt" file to list
 your desired list of websites to block.
 
-Otherwise, click the button below to have BlocU block access to it's
-default list.
+Otherwise, running BlocU will block access to it's
+default list of websites.
 
 Happy Blocing!</property>
   </object>
@@ -63,10 +82,7 @@ Happy Blocing!</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Welcome to UProtect!</property>
     <property name="default_width">600</property>
-    <property name="default_height">400</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="default_height">300</property>
     <child>
       <object class="GtkBox" id="box1">
         <property name="visible">True</property>
@@ -103,8 +119,24 @@ Happy Blocing!</property>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="padding">20</property>
+            <property name="padding">15</property>
             <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button3">
+            <property name="label" translatable="yes">Edit File</property>
+            <property name="name">button3</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="has_tooltip">True</property>
+            <property name="halign">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
           </packing>
         </child>
         <child>
@@ -119,8 +151,8 @@ Happy Blocing!</property>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="padding">30</property>
-            <property name="position">2</property>
+            <property name="padding">10</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
