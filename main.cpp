@@ -12,7 +12,7 @@ Gtk::MessageDialog* pDialog = nullptr;
 static
 void on_button_clicked()
 {
-    //block();
+    block();
     auto app = Gtk::Application::create();
     auto refBuilder = Gtk::Builder::create();
     refBuilder->add_from_file("gui.glade");
@@ -22,8 +22,8 @@ void on_button_clicked()
         Gtk::Box* pBox = nullptr;
         refBuilder->get_widget("box2", pBox);
 
-        Gtk::ButtonBox* pButton = nullptr;
-        refBuilder->get_widget("buttonbox1", pButton);
+        Gtk::Button* pButton = nullptr;
+        refBuilder->get_widget("button2", pButton);
 
         app->run(*pDialog);
 
