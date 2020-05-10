@@ -31,7 +31,7 @@ void on_button3_clicked(){
 static
 void on_button_clicked()
 {
-    //block();
+    block();
     auto app = Gtk::Application::create();
     auto refBuilder = Gtk::Builder::create();
     refBuilder->add_from_file("gui.glade");
