@@ -80,9 +80,12 @@ Happy Blocing!</property>
     <property name="name">window1</property>
     <property name="width_request">0</property>
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Welcome to UProtect!</property>
+    <property name="title" translatable="yes">BlocU</property>
     <property name="default_width">600</property>
     <property name="default_height">300</property>
+    <child>
+      <placeholder/>
+    </child>
     <child>
       <object class="GtkBox" id="box1">
         <property name="visible">True</property>
